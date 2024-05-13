@@ -615,7 +615,8 @@
                             "rel": vroegereResultaten(el[0]),
                             "totaal": el[1],
                             "verdelingPerFac": perPartij.get(el[0]),
-                            "tijdsframe": "vroeger"
+                            "tijdsframe": "vroeger",
+                            "tijdsframeVolgorde": 1
                         },
                         {
                             "partij": el[0],
@@ -623,7 +624,8 @@
                             "rel": el[1] / respons,
                             "totaal": el[1],
                             "verdelingPerFac": perPartij.get(el[0]),
-                            "tijdsframe": "nu"
+                            "tijdsframe": "nu",
+                            "tijdsframeVolgorde": 2
                         }
                     ]
                 } else {
@@ -633,7 +635,8 @@
                         "rel": el[1] / respons,
                         "totaal": el[1],
                         "verdelingPerFac": perPartij.get(el[0]),
-                        "tijdsframe": "nu"
+                        "tijdsframe": "nu",
+                        "tijdsframeVolgorde": 2
                     }]
                 }
             })),
@@ -831,18 +834,33 @@
             fx: { axis: "bottom", tickRotate: -30, label: "Stemkeuze" },
             y: { grid: true, label: "Procent", percent: true },
             
+
+
             style: {
                 "min-width": "100%"
             },
             marks: [
                 Plot.barY(data.totaal, {
+
+                    channels: {
+                        tijdsframeVolgorde: "tijdsframeVolgorde"
+                    },
+
                     x: "tijdsframe",
                     y: "rel",
                     fx: "partij",
-                    sort: { x: "-y" },
+                    sort: { x: "tijdsframeVolgorde", fx: "-y", reduce: (group) => group[group.length - 1]},
 
                     // fill: (obj) => (obj.tijdsframe == "nu" ? partijKleuren(obj.partij) : verlicht(partijKleuren(obj.partij))),
                     fill: (obj) => { if (obj.tijdsframe == "vroeger") { return lichtePartijKleuren(obj.partij) } return partijKleuren(obj.partij) }
+                }),
+                Plot.image(data.totaal, {
+                    fx: "partij",
+                    y: (d) => 0.03,
+                    filter: (d) => isPartij(d.partij),
+                    src: (d) => partijLogos(d.partij),
+                    opacity: 0.5,
+                    width: 30,
                 }),
                 Plot.text(data.totaal, {
                     x: "tijdsframe",
@@ -852,15 +870,8 @@
                     lineWidth: 30,
                     textAnchor: "center",
                     dy: -8,
-                    fill: (obj) => obj.tijdsframe == "vroeger" ? "#c3c3c3" : "#000000",
+                    fill: (obj) => obj.tijdsframe == "vroeger" ? "#808080" : "#000000",
                     fontSize: (obj) => obj.tijdsframe == "vroeger" ? 12 : 18,
-                }),
-                Plot.image(data.totaal, {
-                    x: "partij",
-                    y: (d) => 0.03,
-                    filter: (d) => isPartij(d.partij),
-                    src: (d) => partijLogos(d.partij),
-                    width: 30,
                 }),
                 Plot.tip(data.totaal, Plot.pointerX({
                     x: "tijdsframe",
