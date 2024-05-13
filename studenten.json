@@ -1,0 +1,569 @@
+{
+    "theologie": {
+        "naam": "Faculteit Theologie en Religiewetenschappen",
+        "vlaams": {
+            "N-VA": 1,
+            "Vlaams Belang": 1,
+            "CD&V": 6,
+            "PVDA": 1
+        },
+        "federaal": {
+            "N-VA": 1,
+            "CD&V": 6,
+            "Groen": 1,
+            "PVDA": 1
+        },
+        "europees": {
+            "N-VA": 1,
+            "CD&V": 3,
+            "Groen": 3,
+            "Geen antwoord / Ik weet het nog niet": 2
+        }
+    },
+    "kerkelijk-recht": {
+        "naam": "Bijzondere Faculteit Kerkelijk Recht",
+        "vlaams": {
+            "Vlaams Belang": 2,
+            "CD&V": 1
+        },
+        "federaal": {
+            "N-VA": 1,
+            "Vlaams Belang": 2
+        },
+        "europees": {
+            "Vlaams Belang": 2,
+            "CD&V": 1
+        }
+    },
+    "hiw": {
+        "naam": "Hoger Instituut voor Wijsbegeerte",
+        "vlaams": {
+            "N-VA": 1,
+            "Vlaams Belang": 3,
+            "Open VLD": 1,
+            "CD&V": 1,
+            "Vooruit": 3,
+            "Groen": 3,
+            "PVDA": 7,
+            "Ik stem blanco": 1
+        },
+        "federaal": {
+            "N-VA": 1,
+            "Vlaams Belang": 3,
+            "Open VLD": 1,
+            "CD&V": 1,
+            "Vooruit": 4,
+            "Groen": 4,
+            "PVDA": 5,
+            "Ik stem blanco": 1,
+            "Geen antwoord / Ik weet het nog niet": 2
+        },
+        "europees": {
+            "Vlaams Belang": 3,
+            "Open VLD": 1,
+            "CD&V": 1,
+            "Vooruit": 2,
+            "Groen": 5,
+            "PVDA": 4,
+            "Ik stem blanco": 1,
+            "Volt": 3,
+            "Geen antwoord / Ik weet het nog niet": 2
+        }
+    },
+    "rechten-crimin": {
+        "naam": "Faculteit Rechtsgeleerdheid en Criminologische Wetenschappen",
+        "vlaams": {
+            "N-VA": 74,
+            "Vlaams Belang": 39,
+            "Open VLD": 59,
+            "CD&V": 51,
+            "Vooruit": 63,
+            "Groen": 57,
+            "PVDA": 23,
+            "Ik stem blanco": 2,
+            "Ik ben niet van plan om zelf te gaan stemmen": 4,
+            "Voor U": 3,
+            "Geen antwoord / Ik weet het nog niet": 41
+        },
+        "federaal": {
+            "N-VA": 87,
+            "Vlaams Belang": 30,
+            "Open VLD": 71,
+            "CD&V": 50,
+            "Vooruit": 55,
+            "Groen": 55,
+            "PVDA": 18,
+            "Ik stem blanco": 2,
+            "Ik ben niet van plan om zelf te gaan stemmen": 4,
+            "Voor U": 2,
+            "L'Unie": 1
+        },
+        "europees": {
+            "N-VA": 59,
+            "Vlaams Belang": 33,
+            "Open VLD": 76,
+            "CD&V": 46,
+            "Vooruit": 39,
+            "Groen": 70,
+            "PVDA": 14,
+            "Ik stem blanco": 3,
+            "Ik ben niet van plan om zelf te gaan stemmen": 3,
+            "10": 1,
+            "Voor U": 3,
+            "Volt": 6,
+            "Geen antwoord / Ik weet het nog niet": 63
+        }
+    },
+    "econ": {
+        "naam": "Faculteit Economie en Bedrijfswetenschappen",
+        "vlaams": {
+            "N-VA": 21,
+            "Vlaams Belang": 10,
+            "Open VLD": 5,
+            "CD&V": 6,
+            "Vooruit": 3,
+            "Groen": 4,
+            "PVDA": 1,
+            "Voor U": 1,
+            "Geen antwoord / Ik weet het nog niet": 8
+        },
+        "federaal": {
+            "N-VA": 27,
+            "Vlaams Belang": 8,
+            "Open VLD": 4,
+            "CD&V": 2,
+            "Vooruit": 3,
+            "Groen": 4,
+            "PVDA": 1,
+            "Voor U": 1,
+            "Geen antwoord / Ik weet het nog niet": 9
+        },
+        "europees": {
+            "N-VA": 12,
+            "Vlaams Belang": 9,
+            "Open VLD": 9,
+            "CD&V": 5,
+            "Vooruit": 3,
+            "Groen": 6,
+            "PVDA": 1,
+            "Voor U": 1,
+            "Volt": 3,
+            "Geen antwoord / Ik weet het nog niet": 10
+        }
+    },
+    "soc": {
+        "naam": "Faculteit Sociale Wetenschappen",
+        "vlaams": {
+            "N-VA": 10,
+            "Vlaams Belang": 9,
+            "Open VLD": 13,
+            "CD&V": 10,
+            "Vooruit": 26,
+            "Groen": 21,
+            "PVDA": 14,
+            "Ik stem blanco": 2,
+            "Ik ben niet van plan om zelf te gaan stemmen": 1,
+            "Partij Blanco": 1,
+            "Geen antwoord / Ik weet het nog niet": 9
+        },
+        "federaal": {
+            "N-VA": 13,
+            "Vlaams Belang": 7,
+            "Open VLD": 10,
+            "CD&V": 12,
+            "Vooruit": 28,
+            "Groen": 19,
+            "PVDA": 13,
+            "Ik stem blanco": 2,
+            "Ik ben niet van plan om zelf te gaan stemmen": 1,
+            "L'Unie": 2,
+            "Geen antwoord / Ik weet het nog niet": 9
+        },
+        "europees": {
+            "N-VA": 8,
+            "Vlaams Belang": 7,
+            "Open VLD": 16,
+            "CD&V": 8,
+            "Vooruit": 22,
+            "Groen": 25,
+            "PVDA": 7,
+            "Ik stem blanco": 1,
+            "Ik ben niet van plan om zelf te gaan stemmen": 1,
+            "10": 1,
+            "Volt": 6,
+            "Geen antwoord / Ik weet het nog niet": 14
+        }
+    },
+    "letteren": {
+        "naam": "Faculteit Letteren",
+        "vlaams": {
+            "N-VA": 49,
+            "Vlaams Belang": 20,
+            "Open VLD": 21,
+            "CD&V": 48,
+            "Vooruit": 86,
+            "Groen": 116,
+            "PVDA": 64,
+            "Ik stem blanco": 3,
+            "Ik ben niet van plan om zelf te gaan stemmen": 2,
+            "Partij Blanco": 2,
+            "Geen antwoord / Ik weet het nog niet": 61
+        },
+        "federaal": {
+            "N-VA": 50,
+            "Vlaams Belang": 17,
+            "Open VLD": 25,
+            "CD&V": 41,
+            "Vooruit": 73,
+            "Groen": 109,
+            "PVDA": 63,
+            "Ik stem blanco": 2,
+            "Ik ben niet van plan om zelf te gaan stemmen": 2,
+            "Partij Blanco": 6,
+            "Voor U": 1,
+            "L'Unie": 10,
+            "Geen antwoord / Ik weet het nog niet": 73
+        },
+        "europees": {
+            "N-VA": 40,
+            "Vlaams Belang": 19,
+            "Open VLD": 29,
+            "CD&V": 29,
+            "Vooruit": 57,
+            "Groen": 126,
+            "PVDA": 48,
+            "Ik stem blanco": 3,
+            "Ik ben niet van plan om zelf te gaan stemmen": 2,
+            "10": 3,
+            "Partij Blanco": 3,
+            "Volt": 25,
+            "Geen antwoord / Ik weet het nog niet": 88
+        }
+    },
+    "ppw": {
+        "naam": "Faculteit Psychologische en Pedagogische Wetenschappen",
+        "vlaams": {
+            "N-VA": 6,
+            "Vlaams Belang": 1,
+            "Open VLD": 4,
+            "CD&V": 7,
+            "Vooruit": 11,
+            "Groen": 19,
+            "PVDA": 10,
+            "Voor U": 1,
+            "Geen antwoord / Ik weet het nog niet": 6
+        },
+        "federaal": {
+            "N-VA": 6,
+            "Vlaams Belang": 1,
+            "Open VLD": 4,
+            "CD&V": 5,
+            "Vooruit": 10,
+            "Groen": 15,
+            "PVDA": 9,
+            "Voor U": 1,
+            "Geen antwoord / Ik weet het nog niet": 14
+        },
+        "europees": {
+            "N-VA": 5,
+            "Vlaams Belang": 1,
+            "Open VLD": 3,
+            "CD&V": 6,
+            "Vooruit": 6,
+            "Groen": 22,
+            "PVDA": 3,
+            "Ik stem blanco": 1,
+            "Volt": 1,
+            "Geen antwoord / Ik weet het nog niet": 17
+        }
+    },
+    "wet": {
+        "naam": "Faculteit Wetenschappen",
+        "vlaams": {
+            "N-VA": 65,
+            "Vlaams Belang": 24,
+            "Open VLD": 22,
+            "CD&V": 25,
+            "Vooruit": 88,
+            "Groen": 83,
+            "PVDA": 32,
+            "Ik stem blanco": 3,
+            "Ik ben niet van plan om zelf te gaan stemmen": 4,
+            "Voor U": 5,
+            "Geen antwoord / Ik weet het nog niet": 51
+        },
+        "federaal": {
+            "N-VA": 60,
+            "Vlaams Belang": 22,
+            "Open VLD": 28,
+            "CD&V": 35,
+            "Vooruit": 81,
+            "Groen": 81,
+            "PVDA": 28,
+            "Ik stem blanco": 3,
+            "Ik ben niet van plan om zelf te gaan stemmen": 3,
+            "Voor U": 3,
+            "L'Unie": 3,
+            "Geen antwoord / Ik weet het nog niet": 55
+        },
+        "europees": {
+            "N-VA": 43,
+            "Vlaams Belang": 21,
+            "Open VLD": 39,
+            "CD&V": 29,
+            "Vooruit": 55,
+            "Groen": 77,
+            "PVDA": 23,
+            "Ik stem blanco": 5,
+            "Ik ben niet van plan om zelf te gaan stemmen": 3,
+            "Voor U": 1,
+            "Volt": 28,
+            "Geen antwoord / Ik weet het nog niet": 78
+        }
+    },
+    "ing": {
+        "naam": "Faculteit Ingenieurswetenschappen",
+        "vlaams": {
+            "N-VA": 77,
+            "Vlaams Belang": 29,
+            "Open VLD": 33,
+            "CD&V": 25,
+            "Vooruit": 32,
+            "Groen": 18,
+            "PVDA": 11,
+            "Ik stem blanco": 3,
+            "Ik ben niet van plan om zelf te gaan stemmen": 3,
+            "Partij Blanco": 2,
+            "Voor U": 4,
+            "Geen antwoord / Ik weet het nog niet": 20
+        },
+        "federaal": {
+            "N-VA": 84,
+            "Vlaams Belang": 18,
+            "Open VLD": 31,
+            "CD&V": 25,
+            "Vooruit": 33,
+            "Groen": 18,
+            "PVDA": 9,
+            "Ik stem blanco": 3,
+            "Ik ben niet van plan om zelf te gaan stemmen": 4,
+            "Partij Blanco": 3,
+            "Voor U": 4,
+            "Geen antwoord / Ik weet het nog niet": 25
+        },
+        "europees": {
+            "N-VA": 61,
+            "Vlaams Belang": 25,
+            "Open VLD": 33,
+            "CD&V": 19,
+            "Vooruit": 28,
+            "Groen": 24,
+            "PVDA": 7,
+            "Ik stem blanco": 3,
+            "Ik ben niet van plan om zelf te gaan stemmen": 4,
+            "Partij Blanco": 3,
+            "Voor U": 2,
+            "Volt": 9,
+            "Geen antwoord / Ik weet het nog niet": 39
+        }
+    },
+    "bio": {
+        "naam": "Faculteit Bio-ingenieurswetenschappen",
+        "vlaams": {
+            "N-VA": 7,
+            "Open VLD": 3,
+            "CD&V": 5,
+            "Vooruit": 11,
+            "Groen": 16,
+            "PVDA": 1,
+            "Partij Blanco": 1,
+            "Geen antwoord / Ik weet het nog niet": 9
+        },
+        "federaal": {
+            "N-VA": 8,
+            "Open VLD": 3,
+            "CD&V": 4,
+            "Vooruit": 10,
+            "Groen": 16,
+            "PVDA": 1,
+            "Partij Blanco": 1,
+            "Geen antwoord / Ik weet het nog niet": 10
+        },
+        "europees": {
+            "N-VA": 6,
+            "Open VLD": 6,
+            "CD&V": 4,
+            "Vooruit": 8,
+            "Groen": 14,
+            "PVDA": 1,
+            "Partij Blanco": 1,
+            "Volt": 2,
+            "Geen antwoord / Ik weet het nog niet": 11
+        }
+    },
+    "iiw": {
+        "naam": "Faculteit Industriële Ingenieurswetenschappen",
+        "vlaams": {
+            "N-VA": 7,
+            "Vlaams Belang": 6,
+            "Open VLD": 4,
+            "CD&V": 2,
+            "Vooruit": 4,
+            "Groen": 2,
+            "PVDA": 1,
+            "Ik ben niet van plan om zelf te gaan stemmen": 1,
+            "Geen antwoord / Ik weet het nog niet": 4
+        },
+        "federaal": {
+            "N-VA": 5,
+            "Vlaams Belang": 6,
+            "Open VLD": 5,
+            "CD&V": 2,
+            "Vooruit": 3,
+            "Groen": 1,
+            "PVDA": 1,
+            "Geen antwoord / Ik weet het nog niet": 8
+        },
+        "europees": {
+            "N-VA": 6,
+            "Vlaams Belang": 6,
+            "Open VLD": 5,
+            "CD&V": 1,
+            "Vooruit": 2,
+            "Groen": 2,
+            "PVDA": 1,
+            "Ik stem blanco": 1,
+            "Geen antwoord / Ik weet het nog niet": 7
+        }
+    },
+    "arch": {
+        "naam": "Faculteit Architectuur",
+        "vlaams": {
+            "N-VA": 1,
+            "Vlaams Belang": 1,
+            "Vooruit": 4,
+            "Groen": 2,
+            "Geen antwoord / Ik weet het nog niet": 2
+        },
+        "federaal": {
+            "N-VA": 2,
+            "Open VLD": 1,
+            "Vooruit": 3,
+            "Groen": 1,
+            "PVDA": 1,
+            "Geen antwoord / Ik weet het nog niet": 2
+        },
+        "europees": {
+            "N-VA": 1,
+            "Open VLD": 2,
+            "Vooruit": 2,
+            "Groen": 1,
+            "PVDA": 1,
+            "Geen antwoord / Ik weet het nog niet": 3
+        }
+    },
+    "geneesk": {
+        "naam": "Faculteit Geneeskunde",
+        "vlaams": {
+            "N-VA": 18,
+            "Vlaams Belang": 4,
+            "Open VLD": 9,
+            "CD&V": 9,
+            "Vooruit": 19,
+            "Groen": 22,
+            "PVDA": 16,
+            "Ik ben niet van plan om zelf te gaan stemmen": 2,
+            "Voor U": 1,
+            "Geen antwoord / Ik weet het nog niet": 19
+        },
+        "federaal": {
+            "N-VA": 19,
+            "Vlaams Belang": 3,
+            "Open VLD": 8,
+            "CD&V": 5,
+            "Vooruit": 18,
+            "Groen": 18,
+            "PVDA": 15,
+            "Ik ben niet van plan om zelf te gaan stemmen": 2,
+            "Voor U": 2,
+            "L'Unie": 1,
+            "Geen antwoord / Ik weet het nog niet": 28
+        },
+        "europees": {
+            "N-VA": 12,
+            "Vlaams Belang": 6,
+            "Open VLD": 10,
+            "CD&V": 9,
+            "Vooruit": 15,
+            "Groen": 19,
+            "PVDA": 13,
+            "Ik stem blanco": 1,
+            "Ik ben niet van plan om zelf te gaan stemmen": 2,
+            "10": 1,
+            "Voor U": 2,
+            "Volt": 3,
+            "Geen antwoord / Ik weet het nog niet": 26
+        }
+    },
+    "farma": {
+        "naam": "Faculteit Farmaceutische Wetenschappen",
+        "vlaams": {
+            "N-VA": 2,
+            "Vlaams Belang": 1,
+            "Open VLD": 2,
+            "CD&V": 1,
+            "Vooruit": 1,
+            "Groen": 1
+        },
+        "federaal": {
+            "N-VA": 1,
+            "Vlaams Belang": 1,
+            "Open VLD": 3,
+            "CD&V": 1,
+            "Vooruit": 1,
+            "PVDA": 1
+        },
+        "europees": {
+            "N-VA": 1,
+            "Vlaams Belang": 1,
+            "Open VLD": 3,
+            "CD&V": 1,
+            "Vooruit": 1,
+            "Geen antwoord / Ik weet het nog niet": 1
+        }
+    },
+    "brw": {
+        "naam": "Faculteit Bewegings- en Revalidatiewetenschappen",
+        "vlaams": {
+            "N-VA": 10,
+            "Vlaams Belang": 3,
+            "Open VLD": 4,
+            "CD&V": 6,
+            "Vooruit": 5,
+            "Groen": 6,
+            "PVDA": 3,
+            "Ik ben niet van plan om zelf te gaan stemmen": 1,
+            "Voor U": 1,
+            "Geen antwoord / Ik weet het nog niet": 7
+        },
+        "federaal": {
+            "N-VA": 9,
+            "Vlaams Belang": 3,
+            "Open VLD": 5,
+            "CD&V": 5,
+            "Vooruit": 4,
+            "Groen": 8,
+            "Voor U": 1,
+            "Geen antwoord / Ik weet het nog niet": 11
+        },
+        "europees": {
+            "N-VA": 10,
+            "Vlaams Belang": 2,
+            "Open VLD": 7,
+            "CD&V": 4,
+            "Vooruit": 5,
+            "Groen": 7,
+            "Geen antwoord / Ik weet het nog niet": 11
+        }
+    }
+}
