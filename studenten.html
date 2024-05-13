@@ -581,8 +581,8 @@
             let resultatenVoorDitParlement = fac[parlement];
 
             for (let stemkeuze in resultatenVoorDitParlement) {
-                const res = Math.round(resultatenVoorDitParlement[stemkeuze] * facWegingen.get(fac.naam));
-                // const res = resultatenVoorDitParlement[stemkeuze];
+                // const res = Math.round(resultatenVoorDitParlement[stemkeuze] * facWegingen.get(fac.naam));
+                const res = resultatenVoorDitParlement[stemkeuze];
 
                 if (stemkeuze == "Ik weet het nog niet") {
                     continue;
@@ -655,6 +655,20 @@
         }
     }
 
+    function lichtePartijKleuren(naam) {
+        switch (naam) {
+            case "CD&V": return "#f2a474";
+            case "Groen": return "#8bccad";
+            case "PVDA": return "#de8f8a";
+            case "Partij Blanco": return "#a36c5a";
+            case "Open VLD": return "#606794";
+            case "N-VA": return "#ffe7a6";
+            case "Vlaams Belang": return "#dbc87b";
+            case "Vooruit": return "#c97569";
+            default: return "#c3c3c3";
+        }
+    }
+
     function isPartij(naam) {
         switch (naam) {
             case "CD&V": return true;
@@ -671,7 +685,6 @@
     }
 
     function vroegereResultaten(naam) {
-        return undefined;
         switch (naam) {
             case "CD&V": return 0.118;
             case "Groen": return 0.302;
@@ -738,27 +751,10 @@
         ["Faculteit Bewegings- en Revalidatiewetenschappen", "BRW"],
     ])
 
-    function clamp(num, min, max) {
-        return num <= min
-            ? min
-            : num >= max
-                ? max
-                : num
-    }
-
-    function verlicht(hex) {
-        const r = parseInt(hex.substring(1, 3), 16)
-        const g = parseInt(hex.substring(3, 5), 16)
-        const b = parseInt(hex.substring(5, 7), 16)
-
-        const p = 0.5;
-
-        const nieuwR = 0 | (1 << 8) + r + (256 - r) * p;
-        const nieuwG = 0 | (1 << 8) + g + (256 - g) * p;
-        const nieuwB = 0 | (1 << 8) + b + (256 - b) * p;
-
-        return "#" + nieuwR.toString(16).padStart(2, '0') + nieuwG.toString(16).padStart(2, '0') + nieuwB.toString(16).padStart(2, '0');
-    }
+    const facContent = new Map([
+        ["theologie", "<p>Kaas enzo</p>"],
+        ["kerkelijk-recht", "<p>hier is tekst</p><p>hier is <i>schuine teskst</i></p>"],
+    ])
 
     function hertekenPerFac() {
         let teBeschouwenFaculteit = studentenData[document.getElementById("faculteitSelect").value];
@@ -783,7 +779,7 @@
 
         const facPlot = Plot.plot({
             title: `Stemgedrag studenten - ${teBeschouwenFaculteit.naam}`,
-            subtitle: `responsgraad n = ${data.respons}${data.respons < 30 ? "(NB: de respons voor deze faculteit ligt erg laag. Neem de resultaten dus met een korrel zout.)" : ""}`,
+            subtitle: `responsgraad n = ${data.respons}\n${data.respons < 30 ? "(NB: de respons voor deze faculteit ligt erg laag. Neem de resultaten dus met een korrel zout.)" : ""}`,
             marginBottom: 100,
             x: { label: "Stemkeuze", tickRotate: -30 },
             y: { grid: true, label: "Procent", percent: true },
@@ -817,87 +813,110 @@
         const div = document.querySelector("#faculteit-vlaams");
         div.innerHTML = "";
         div.append(facPlot);
+
+        const content = document.querySelector("#faculteit-content");
+        content.innerHTML = facContent.get(document.getElementById("faculteitSelect").value);
     }
 
     document.getElementById("faculteitSelect").addEventListener("change", hertekenPerFac);
 
-    const vlaanderen = verwerk(studentenData, "vlaams");
+    function renderStudentenPlot(parlement) {
+        const data = verwerk(studentenData, parlement);
 
-    const studentenVlaamsPlot = Plot.plot({
-        title: "Stemgedrag studenten - Vlaams parlement",
-        subtitle: `responsgraad n = ${vlaanderen.respons}`,
-        marginBottom: 100,
-        x: { label: "Stemkeuze", tickRotate: -30 },
-        y: { grid: true, label: "Procent", percent: true },
-        style: {
-            "min-width": "100%"
-        },
-        marks: [
-            Plot.barY(vlaanderen.totaal, {
-                x: "partij",
-                y: "rel",
-                // fx: "partij",
-                sort: { x: "-y" },
-                fill: (obj) => (obj.tijdsframe == "nu" ? partijKleuren(obj.partij) : verlicht(partijKleuren(obj.partij))),
-            }),
-            Plot.text(vlaanderen.totaal, {
-                x: "partij",
-                y: "rel",
-                // fx: "partij",
-                text: "procentTekst",
-                lineWidth: 30,
-                textAnchor: "center",
-                dy: -6
-            }),
-            Plot.image(vlaanderen.totaal, {
-                x: "partij",
-                y: (d) => 0.03,
-                filter: (d) => isPartij(d.partij),
-                src: (d) => partijLogos(d.partij),
-                width: 30,
-            }),
-            Plot.tip(vlaanderen.totaal, Plot.pointerX({
-                x: "partij",
-                y: "rel",
-                // fx: "partij",
-                fillOpacity: 0.9,
-                // anchor: "bottom",
-                title: (d) =>
-                    d.tijdsframe == "nu" ?
-                        d.partij +
-                        `\nTotaal: ${d.totaal}\n\n` +
-                        [...d.verdelingPerFac.entries()]
-                            .toSorted((a, b) => b[1] - a[1])
-                            .map((curr) => `${facAfkortingen.get(curr[0])}: ${curr[1]} (${(curr[1] / d.totaal * 100).toFixed(1)}%)`)
-                            .join("\n")
-                        : d.partij + `\nVetopeiling 2019: ${d.procentTekst}`
-            }))
-        ]
-    });
-    const div = document.querySelector("#studenten-vlaams");
-    div.append(studentenVlaamsPlot);
+        const plot = Plot.plot({
+            title: `Stemgedrag studenten - ${parlement.charAt(0).toUpperCase() + parlement.slice(1)} parlement`,
+            subtitle: `responsgraad n = ${data.respons}`,
+            marginBottom: 100,
+            x: { axis: null },
+            fx: { axis: "bottom", tickRotate: -30, label: "Stemkeuze" },
+            y: { grid: true, label: "Procent", percent: true },
+            
+            style: {
+                "min-width": "100%"
+            },
+            marks: [
+                Plot.barY(data.totaal, {
+                    x: "tijdsframe",
+                    y: "rel",
+                    fx: "partij",
+                    sort: { x: "-y" },
+
+                    // fill: (obj) => (obj.tijdsframe == "nu" ? partijKleuren(obj.partij) : verlicht(partijKleuren(obj.partij))),
+                    fill: (obj) => { if (obj.tijdsframe == "vroeger") { return lichtePartijKleuren(obj.partij) } return partijKleuren(obj.partij) }
+                }),
+                Plot.text(data.totaal, {
+                    x: "tijdsframe",
+                    y: "rel",
+                    fx: "partij",
+                    text: "procentTekst",
+                    lineWidth: 30,
+                    textAnchor: "center",
+                    dy: -8,
+                    fill: (obj) => obj.tijdsframe == "vroeger" ? "#c3c3c3" : "#000000",
+                    fontSize: (obj) => obj.tijdsframe == "vroeger" ? 12 : 18,
+                }),
+                Plot.image(data.totaal, {
+                    x: "partij",
+                    y: (d) => 0.03,
+                    filter: (d) => isPartij(d.partij),
+                    src: (d) => partijLogos(d.partij),
+                    width: 30,
+                }),
+                Plot.tip(data.totaal, Plot.pointerX({
+                    x: "tijdsframe",
+                    y: "rel",
+                    fx: "partij",
+                    fillOpacity: 0.9,
+                    // anchor: "bottom",
+                    title: (d) =>
+                        d.tijdsframe == "nu" ?
+                            d.partij +
+                            `\nTotaal: ${d.totaal}\n\n` +
+                            [...d.verdelingPerFac.entries()]
+                                .toSorted((a, b) => b[1] - a[1])
+                                .map((curr) => `${facAfkortingen.get(curr[0])}: ${curr[1]} (${(curr[1] / d.totaal * 100).toFixed(1)}%)`)
+                                .join("\n")
+                            : d.partij + `\nVetopeiling 2019: ${d.procentTekst}`
+                }))
+            ]
+        });
+        const div = document.querySelector(`#studenten-${parlement}`);
+        div.append(plot);
+    }
+
+    renderStudentenPlot("vlaams");
+    renderStudentenPlot("federaal");
+    renderStudentenPlot("europees");
 </script>
 
 <div id="studenten-vlaams" style="min-width: 100%;"></div>
+<div id="studenten-federaal" style="min-width: 100%;"></div>
+<div id="studenten-europees" style="min-width: 100%;"></div>
 
-<label for="faculteit">Toon de gegevens per faculteit:</label>
-<select id="faculteitSelect">
-    <option value="theologie">Faculteit Theologie en Religiewetenschappen</option>
-    <option value="kerkelijk-recht">Bijzondere Faculteit Kerkelijk Recht</option>
-    <option value="hiw">Hoger Instituut voor Wijsbegeerte</option>
-    <option value="rechten-crimin">Faculteit Rechtsgeleerdheid en Criminologische Wetenschappen</option>
-    <option value="econ">Faculteit Economie en Bedrijfswetenschappen</option>
-    <option value="soc">Faculteit Sociale Wetenschappen</option>
-    <option value="letteren">Faculteit Letteren</option>
-    <option value="ppw">Faculteit Psychologische en Pedagogische Wetenschappen</option>
-    <option value="wet">Faculteit Wetenschappen</option>
-    <option value="ing">Faculteit Ingenieurswetenschappen</option>
-    <option value="bio">Faculteit Bio-ingenieurswetenschappen</option>
-    <option value="iiw">Faculteit Industriële Ingenieurswetenschappen</option>
-    <option value="arch">Faculteit Architectuur</option>
-    <option value="geneesk">Faculteit Geneeskunde</option>
-    <option value="farma">Faculteit Farmaceutische Wetenschappen</option>
-    <option value="brw">Faculteit Bewegings- en Revalidatiewetenschappen</option>
-</select>
 
-<div id="faculteit-vlaams" style="min-width: 100%;"></div>
+
+<div id="faculteitengedoe">
+    <label for="faculteitSelect">Toon de gegevens per faculteit:</label>
+    <select id="faculteitSelect">
+        <option value="theologie">Faculteit Theologie en Religiewetenschappen</option>
+        <option value="kerkelijk-recht">Bijzondere Faculteit Kerkelijk Recht</option>
+        <option value="hiw">Hoger Instituut voor Wijsbegeerte</option>
+        <option value="rechten-crimin">Faculteit Rechtsgeleerdheid en Criminologische Wetenschappen</option>
+        <option value="econ">Faculteit Economie en Bedrijfswetenschappen</option>
+        <option value="soc">Faculteit Sociale Wetenschappen</option>
+        <option value="letteren">Faculteit Letteren</option>
+        <option value="ppw">Faculteit Psychologische en Pedagogische Wetenschappen</option>
+        <option value="wet">Faculteit Wetenschappen</option>
+        <option value="ing">Faculteit Ingenieurswetenschappen</option>
+        <option value="bio">Faculteit Bio-ingenieurswetenschappen</option>
+        <option value="iiw">Faculteit Industriële Ingenieurswetenschappen</option>
+        <option value="arch">Faculteit Architectuur</option>
+        <option value="geneesk">Faculteit Geneeskunde</option>
+        <option value="farma">Faculteit Farmaceutische Wetenschappen</option>
+        <option value="brw">Faculteit Bewegings- en Revalidatiewetenschappen</option>
+    </select>
+
+    <div id="faculteit-vlaams" style="min-width: 100%;"></div>
+
+    <div id="faculteit-content"></div>
+</div>
