@@ -1,0 +1,1071 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   class="plot-d6a7b5"
+   fill="currentColor"
+   font-family="system-ui, sans-serif"
+   font-size="10"
+   text-anchor="middle"
+   width="640"
+   height="500"
+   viewBox="0 0 640 500"
+   style="min-width: 100%;"
+   version="1.1"
+   id="svg127"
+   sodipodi:docname="proffenFederaal.svg"
+   inkscape:export-filename="proffenFederaal.png"
+   inkscape:export-xdpi="960"
+   inkscape:export-ydpi="960"
+   inkscape:version="1.3.2 (091e20ef0f, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs127" />
+  <sodipodi:namedview
+     id="namedview127"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:zoom="1.5328692"
+     inkscape:cx="309.22404"
+     inkscape:cy="189.84007"
+     inkscape:window-width="960"
+     inkscape:window-height="1038"
+     inkscape:window-x="0"
+     inkscape:window-y="42"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg127" />
+  <style
+     id="style1">:where(.plot-d6a7b5) {
+  --plot-background: white;
+  display: block;
+  height: auto;
+  height: intrinsic;
+  max-width: 100%;
+}
+:where(.plot-d6a7b5 text),
+:where(.plot-d6a7b5 tspan) {
+  white-space: pre;
+}</style>
+  <g
+     aria-label="fx-axis tick label"
+     transform="translate(0.5,12.964101615137755)"
+     id="g10">
+    <g
+       text-anchor="end"
+       transform="translate(1,0)"
+       id="g1">
+      <text
+         y="0.32em"
+         transform="translate(69.5,400) rotate(-30)"
+         id="text1"
+         style="-inkscape-font-specification:'Tiempos Text, Normal';font-family:'Tiempos Text';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">Groen</text>
+    </g>
+    <g
+       text-anchor="end"
+       transform="translate(66,0)"
+       id="g2">
+      <text
+         y="0.32em"
+         transform="translate(69.5,400) rotate(-30)"
+         id="text2"
+         style="-inkscape-font-specification:'Tiempos Text, Normal';font-family:'Tiempos Text';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">Vooruit</text>
+    </g>
+    <g
+       text-anchor="end"
+       transform="translate(131,0)"
+       id="g3">
+      <text
+         y="0.32em"
+         transform="translate(69.5,400) rotate(-30)"
+         id="text3"
+         style="-inkscape-font-specification:'Tiempos Text, Normal';font-family:'Tiempos Text';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">N-VA</text>
+    </g>
+    <g
+       text-anchor="end"
+       transform="translate(196,0)"
+       id="g4">
+      <text
+         y="0.32em"
+         transform="translate(69.5,400) rotate(-30)"
+         id="text4"
+         style="-inkscape-font-specification:'Tiempos Text, Normal';font-family:'Tiempos Text';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">CD&amp;V</text>
+    </g>
+    <g
+       text-anchor="end"
+       transform="translate(261,0)"
+       id="g5">
+      <text
+         y="0.32em"
+         transform="translate(69.5,400) rotate(-30)"
+         id="text5"
+         style="-inkscape-font-specification:'Tiempos Text, Normal';font-family:'Tiempos Text';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">Open VLD</text>
+    </g>
+    <g
+       text-anchor="end"
+       transform="translate(326,0)"
+       id="g6">
+      <text
+         y="0.32em"
+         transform="translate(69.5,400) rotate(-30)"
+         id="text6"
+         style="-inkscape-font-specification:'Tiempos Text, Normal';font-family:'Tiempos Text';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">PVDA</text>
+    </g>
+    <g
+       text-anchor="end"
+       transform="translate(391,0)"
+       id="g7">
+      <text
+         y="0.32em"
+         transform="translate(69.5,400) rotate(-30)"
+         id="text7"
+         style="-inkscape-font-specification:'Tiempos Text, Normal';font-family:'Tiempos Text';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">Niet van plan te gaan stemmen</text>
+    </g>
+    <g
+       text-anchor="end"
+       transform="translate(456,0)"
+       id="g8">
+      <text
+         y="0.32em"
+         transform="translate(69.5,400) rotate(-30)"
+         id="text8"
+         style="-inkscape-font-specification:'Tiempos Text, Normal';font-family:'Tiempos Text';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">Blanco</text>
+    </g>
+    <g
+       text-anchor="end"
+       transform="translate(521,0)"
+       id="g9">
+      <text
+         y="0.32em"
+         transform="translate(69.5,400) rotate(-30)"
+         id="text9"
+         style="-inkscape-font-specification:'Tiempos Text, Normal';font-family:'Tiempos Text';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">Partij Blanco</text>
+    </g>
+  </g>
+  <g
+     aria-label="y-grid"
+     aria-hidden="true"
+     transform="translate(0,0.5)"
+     id="g83">
+    <g
+       stroke="currentColor"
+       stroke-opacity="0.1"
+       transform="translate(1,0)"
+       id="g18">
+      <line
+         x1="40"
+         x2="99"
+         y1="400"
+         y2="400"
+         id="line11" />
+      <line
+         x1="40"
+         x2="99"
+         y1="348.21568627450984"
+         y2="348.21568627450984"
+         id="line12" />
+      <line
+         x1="40"
+         x2="99"
+         y1="296.4313725490196"
+         y2="296.4313725490196"
+         id="line13" />
+      <line
+         x1="40"
+         x2="99"
+         y1="244.64705882352942"
+         y2="244.64705882352942"
+         id="line14" />
+      <line
+         x1="40"
+         x2="99"
+         y1="192.86274509803923"
+         y2="192.86274509803923"
+         id="line15" />
+      <line
+         x1="40"
+         x2="99"
+         y1="141.07843137254906"
+         y2="141.07843137254906"
+         id="line16" />
+      <line
+         x1="40"
+         x2="99"
+         y1="89.29411764705884"
+         y2="89.29411764705884"
+         id="line17" />
+      <line
+         x1="40"
+         x2="99"
+         y1="37.50980392156865"
+         y2="37.50980392156865"
+         id="line18" />
+    </g>
+    <g
+       stroke="currentColor"
+       stroke-opacity="0.1"
+       transform="translate(66,0)"
+       id="g26">
+      <line
+         x1="40"
+         x2="99"
+         y1="400"
+         y2="400"
+         id="line19" />
+      <line
+         x1="40"
+         x2="99"
+         y1="348.21568627450984"
+         y2="348.21568627450984"
+         id="line20" />
+      <line
+         x1="40"
+         x2="99"
+         y1="296.4313725490196"
+         y2="296.4313725490196"
+         id="line21" />
+      <line
+         x1="40"
+         x2="99"
+         y1="244.64705882352942"
+         y2="244.64705882352942"
+         id="line22" />
+      <line
+         x1="40"
+         x2="99"
+         y1="192.86274509803923"
+         y2="192.86274509803923"
+         id="line23" />
+      <line
+         x1="40"
+         x2="99"
+         y1="141.07843137254906"
+         y2="141.07843137254906"
+         id="line24" />
+      <line
+         x1="40"
+         x2="99"
+         y1="89.29411764705884"
+         y2="89.29411764705884"
+         id="line25" />
+      <line
+         x1="40"
+         x2="99"
+         y1="37.50980392156865"
+         y2="37.50980392156865"
+         id="line26" />
+    </g>
+    <g
+       stroke="currentColor"
+       stroke-opacity="0.1"
+       transform="translate(131,0)"
+       id="g34">
+      <line
+         x1="40"
+         x2="99"
+         y1="400"
+         y2="400"
+         id="line27" />
+      <line
+         x1="40"
+         x2="99"
+         y1="348.21568627450984"
+         y2="348.21568627450984"
+         id="line28" />
+      <line
+         x1="40"
+         x2="99"
+         y1="296.4313725490196"
+         y2="296.4313725490196"
+         id="line29" />
+      <line
+         x1="40"
+         x2="99"
+         y1="244.64705882352942"
+         y2="244.64705882352942"
+         id="line30" />
+      <line
+         x1="40"
+         x2="99"
+         y1="192.86274509803923"
+         y2="192.86274509803923"
+         id="line31" />
+      <line
+         x1="40"
+         x2="99"
+         y1="141.07843137254906"
+         y2="141.07843137254906"
+         id="line32" />
+      <line
+         x1="40"
+         x2="99"
+         y1="89.29411764705884"
+         y2="89.29411764705884"
+         id="line33" />
+      <line
+         x1="40"
+         x2="99"
+         y1="37.50980392156865"
+         y2="37.50980392156865"
+         id="line34" />
+    </g>
+    <g
+       stroke="currentColor"
+       stroke-opacity="0.1"
+       transform="translate(196,0)"
+       id="g42">
+      <line
+         x1="40"
+         x2="99"
+         y1="400"
+         y2="400"
+         id="line35" />
+      <line
+         x1="40"
+         x2="99"
+         y1="348.21568627450984"
+         y2="348.21568627450984"
+         id="line36" />
+      <line
+         x1="40"
+         x2="99"
+         y1="296.4313725490196"
+         y2="296.4313725490196"
+         id="line37" />
+      <line
+         x1="40"
+         x2="99"
+         y1="244.64705882352942"
+         y2="244.64705882352942"
+         id="line38" />
+      <line
+         x1="40"
+         x2="99"
+         y1="192.86274509803923"
+         y2="192.86274509803923"
+         id="line39" />
+      <line
+         x1="40"
+         x2="99"
+         y1="141.07843137254906"
+         y2="141.07843137254906"
+         id="line40" />
+      <line
+         x1="40"
+         x2="99"
+         y1="89.29411764705884"
+         y2="89.29411764705884"
+         id="line41" />
+      <line
+         x1="40"
+         x2="99"
+         y1="37.50980392156865"
+         y2="37.50980392156865"
+         id="line42" />
+    </g>
+    <g
+       stroke="currentColor"
+       stroke-opacity="0.1"
+       transform="translate(261,0)"
+       id="g50">
+      <line
+         x1="40"
+         x2="99"
+         y1="400"
+         y2="400"
+         id="line43" />
+      <line
+         x1="40"
+         x2="99"
+         y1="348.21568627450984"
+         y2="348.21568627450984"
+         id="line44" />
+      <line
+         x1="40"
+         x2="99"
+         y1="296.4313725490196"
+         y2="296.4313725490196"
+         id="line45" />
+      <line
+         x1="40"
+         x2="99"
+         y1="244.64705882352942"
+         y2="244.64705882352942"
+         id="line46" />
+      <line
+         x1="40"
+         x2="99"
+         y1="192.86274509803923"
+         y2="192.86274509803923"
+         id="line47" />
+      <line
+         x1="40"
+         x2="99"
+         y1="141.07843137254906"
+         y2="141.07843137254906"
+         id="line48" />
+      <line
+         x1="40"
+         x2="99"
+         y1="89.29411764705884"
+         y2="89.29411764705884"
+         id="line49" />
+      <line
+         x1="40"
+         x2="99"
+         y1="37.50980392156865"
+         y2="37.50980392156865"
+         id="line50" />
+    </g>
+    <g
+       stroke="currentColor"
+       stroke-opacity="0.1"
+       transform="translate(326,0)"
+       id="g58">
+      <line
+         x1="40"
+         x2="99"
+         y1="400"
+         y2="400"
+         id="line51" />
+      <line
+         x1="40"
+         x2="99"
+         y1="348.21568627450984"
+         y2="348.21568627450984"
+         id="line52" />
+      <line
+         x1="40"
+         x2="99"
+         y1="296.4313725490196"
+         y2="296.4313725490196"
+         id="line53" />
+      <line
+         x1="40"
+         x2="99"
+         y1="244.64705882352942"
+         y2="244.64705882352942"
+         id="line54" />
+      <line
+         x1="40"
+         x2="99"
+         y1="192.86274509803923"
+         y2="192.86274509803923"
+         id="line55" />
+      <line
+         x1="40"
+         x2="99"
+         y1="141.07843137254906"
+         y2="141.07843137254906"
+         id="line56" />
+      <line
+         x1="40"
+         x2="99"
+         y1="89.29411764705884"
+         y2="89.29411764705884"
+         id="line57" />
+      <line
+         x1="40"
+         x2="99"
+         y1="37.50980392156865"
+         y2="37.50980392156865"
+         id="line58" />
+    </g>
+    <g
+       stroke="currentColor"
+       stroke-opacity="0.1"
+       transform="translate(391,0)"
+       id="g66">
+      <line
+         x1="40"
+         x2="99"
+         y1="400"
+         y2="400"
+         id="line59" />
+      <line
+         x1="40"
+         x2="99"
+         y1="348.21568627450984"
+         y2="348.21568627450984"
+         id="line60" />
+      <line
+         x1="40"
+         x2="99"
+         y1="296.4313725490196"
+         y2="296.4313725490196"
+         id="line61" />
+      <line
+         x1="40"
+         x2="99"
+         y1="244.64705882352942"
+         y2="244.64705882352942"
+         id="line62" />
+      <line
+         x1="40"
+         x2="99"
+         y1="192.86274509803923"
+         y2="192.86274509803923"
+         id="line63" />
+      <line
+         x1="40"
+         x2="99"
+         y1="141.07843137254906"
+         y2="141.07843137254906"
+         id="line64" />
+      <line
+         x1="40"
+         x2="99"
+         y1="89.29411764705884"
+         y2="89.29411764705884"
+         id="line65" />
+      <line
+         x1="40"
+         x2="99"
+         y1="37.50980392156865"
+         y2="37.50980392156865"
+         id="line66" />
+    </g>
+    <g
+       stroke="currentColor"
+       stroke-opacity="0.1"
+       transform="translate(456,0)"
+       id="g74">
+      <line
+         x1="40"
+         x2="99"
+         y1="400"
+         y2="400"
+         id="line67" />
+      <line
+         x1="40"
+         x2="99"
+         y1="348.21568627450984"
+         y2="348.21568627450984"
+         id="line68" />
+      <line
+         x1="40"
+         x2="99"
+         y1="296.4313725490196"
+         y2="296.4313725490196"
+         id="line69" />
+      <line
+         x1="40"
+         x2="99"
+         y1="244.64705882352942"
+         y2="244.64705882352942"
+         id="line70" />
+      <line
+         x1="40"
+         x2="99"
+         y1="192.86274509803923"
+         y2="192.86274509803923"
+         id="line71" />
+      <line
+         x1="40"
+         x2="99"
+         y1="141.07843137254906"
+         y2="141.07843137254906"
+         id="line72" />
+      <line
+         x1="40"
+         x2="99"
+         y1="89.29411764705884"
+         y2="89.29411764705884"
+         id="line73" />
+      <line
+         x1="40"
+         x2="99"
+         y1="37.50980392156865"
+         y2="37.50980392156865"
+         id="line74" />
+    </g>
+    <g
+       stroke="currentColor"
+       stroke-opacity="0.1"
+       transform="translate(521,0)"
+       id="g82">
+      <line
+         x1="40"
+         x2="99"
+         y1="400"
+         y2="400"
+         id="line75" />
+      <line
+         x1="40"
+         x2="99"
+         y1="348.21568627450984"
+         y2="348.21568627450984"
+         id="line76" />
+      <line
+         x1="40"
+         x2="99"
+         y1="296.4313725490196"
+         y2="296.4313725490196"
+         id="line77" />
+      <line
+         x1="40"
+         x2="99"
+         y1="244.64705882352942"
+         y2="244.64705882352942"
+         id="line78" />
+      <line
+         x1="40"
+         x2="99"
+         y1="192.86274509803923"
+         y2="192.86274509803923"
+         id="line79" />
+      <line
+         x1="40"
+         x2="99"
+         y1="141.07843137254906"
+         y2="141.07843137254906"
+         id="line80" />
+      <line
+         x1="40"
+         x2="99"
+         y1="89.29411764705884"
+         y2="89.29411764705884"
+         id="line81" />
+      <line
+         x1="40"
+         x2="99"
+         y1="37.50980392156865"
+         y2="37.50980392156865"
+         id="line82" />
+    </g>
+  </g>
+  <g
+     aria-label="y-axis tick"
+     aria-hidden="true"
+     transform="translate(0,0.5)"
+     id="g91">
+    <g
+       fill="none"
+       stroke="currentColor"
+       transform="translate(1,0)"
+       id="g90">
+      <path
+         transform="translate(40,400)"
+         d="M0,0L-6,0"
+         id="path83" />
+      <path
+         transform="translate(40,348.21568627450984)"
+         d="M0,0L-6,0"
+         id="path84" />
+      <path
+         transform="translate(40,296.4313725490196)"
+         d="M0,0L-6,0"
+         id="path85" />
+      <path
+         transform="translate(40,244.64705882352942)"
+         d="M0,0L-6,0"
+         id="path86" />
+      <path
+         transform="translate(40,192.86274509803923)"
+         d="M0,0L-6,0"
+         id="path87" />
+      <path
+         transform="translate(40,141.07843137254906)"
+         d="M0,0L-6,0"
+         id="path88" />
+      <path
+         transform="translate(40,89.29411764705884)"
+         d="M0,0L-6,0"
+         id="path89" />
+      <path
+         transform="translate(40,37.50980392156865)"
+         d="M0,0L-6,0"
+         id="path90" />
+    </g>
+  </g>
+  <g
+     aria-label="y-axis tick label"
+     transform="translate(-8.5,0.5)"
+     id="g99">
+    <g
+       text-anchor="end"
+       font-variant="tabular-nums"
+       transform="translate(1,0)"
+       id="g98">
+      <text
+         y="0.32em"
+         transform="translate(40,400)"
+         id="text91"
+         style="-inkscape-font-specification:'Tiempos Text, Normal';font-family:'Tiempos Text';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">0</text>
+      <text
+         y="0.32em"
+         transform="translate(40,348.21568627450984)"
+         id="text92"
+         style="-inkscape-font-specification:'Tiempos Text, Normal';font-family:'Tiempos Text';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">5</text>
+      <text
+         y="0.32em"
+         transform="translate(40,296.4313725490196)"
+         id="text93"
+         style="-inkscape-font-specification:'Tiempos Text, Normal';font-family:'Tiempos Text';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">10</text>
+      <text
+         y="0.32em"
+         transform="translate(40,244.64705882352942)"
+         id="text94"
+         style="-inkscape-font-specification:'Tiempos Text, Normal';font-family:'Tiempos Text';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">15</text>
+      <text
+         y="0.32em"
+         transform="translate(40,192.86274509803923)"
+         id="text95"
+         style="-inkscape-font-specification:'Tiempos Text, Normal';font-family:'Tiempos Text';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">20</text>
+      <text
+         y="0.32em"
+         transform="translate(40,141.07843137254906)"
+         id="text96"
+         style="-inkscape-font-specification:'Tiempos Text, Normal';font-family:'Tiempos Text';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">25</text>
+      <text
+         y="0.32em"
+         transform="translate(40,89.29411764705884)"
+         id="text97"
+         style="-inkscape-font-specification:'Tiempos Text, Normal';font-family:'Tiempos Text';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">30</text>
+      <text
+         y="0.32em"
+         transform="translate(40,37.50980392156865)"
+         id="text98"
+         style="-inkscape-font-specification:'Tiempos Text, Normal';font-family:'Tiempos Text';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">35</text>
+    </g>
+  </g>
+  <g
+     aria-label="bar"
+     id="g109">
+    <g
+       transform="translate(1,0)"
+       id="g100">
+      <rect
+         x="46"
+         width="48"
+         y="20"
+         height="380"
+         fill="#02ad5b"
+         id="rect99" />
+    </g>
+    <g
+       transform="translate(66,0)"
+       id="g101">
+      <rect
+         x="46"
+         width="48"
+         y="236.078431372549"
+         height="163.921568627451"
+         fill="#cb1a01"
+         id="rect100" />
+    </g>
+    <g
+       transform="translate(131,0)"
+       id="g102">
+      <rect
+         x="46"
+         width="48"
+         y="243.5294117647059"
+         height="156.4705882352941"
+         fill="#fabe19"
+         id="rect101" />
+    </g>
+    <g
+       transform="translate(196,0)"
+       id="g103">
+      <rect
+         x="46"
+         width="48"
+         y="250.98039215686276"
+         height="149.01960784313724"
+         fill="#ff6000"
+         id="rect102" />
+    </g>
+    <g
+       transform="translate(261,0)"
+       id="g104">
+      <rect
+         x="46"
+         width="48"
+         y="325.4901960784314"
+         height="74.50980392156862"
+         fill="#29347e"
+         id="rect103" />
+    </g>
+    <g
+       transform="translate(326,0)"
+       id="g105">
+      <rect
+         x="46"
+         width="48"
+         y="340.3921568627451"
+         height="59.60784313725492"
+         fill="#ef4135"
+         id="rect104" />
+    </g>
+    <g
+       transform="translate(391,0)"
+       id="g106">
+      <rect
+         x="46"
+         width="48"
+         y="377.6470588235294"
+         height="22.35294117647061"
+         fill="#8f8f8f"
+         id="rect105" />
+    </g>
+    <g
+       transform="translate(456,0)"
+       id="g107">
+      <rect
+         x="46"
+         width="48"
+         y="385.0980392156863"
+         height="14.901960784313701"
+         fill="#8f8f8f"
+         id="rect106" />
+    </g>
+    <g
+       transform="translate(521,0)"
+       id="g108">
+      <rect
+         x="46"
+         width="48"
+         y="385.0980392156863"
+         height="14.901960784313701"
+         fill="#b32d00"
+         id="rect107" />
+    </g>
+  </g>
+  <g
+     aria-label="image"
+     transform="translate(0.5,0.5)"
+     id="g117">
+    <g
+       transform="translate(1,0)"
+       id="g110">
+      <image
+         x="54.5"
+         y="353.9294117647059"
+         width="30"
+         height="30"
+         href="https://assets.nationbuilder.com/groen/pages/15646/attachments/original/1661256240/Logo_fullcolor.png?1661256240"
+         id="image109" />
+    </g>
+    <g
+       transform="translate(66,0)"
+       id="g111">
+      <image
+         x="54.5"
+         y="353.9294117647059"
+         width="30"
+         height="30"
+         href="https://assets.nationbuilder.com/vooruit/sites/3/meta_images/original/Vooruit_thumbnail.jpg?1619535283"
+         id="image110" />
+    </g>
+    <g
+       transform="translate(131,0)"
+       id="g112">
+      <image
+         x="54.5"
+         y="353.9294117647059"
+         width="30"
+         height="30"
+         href="https://english.n-va.be/sites/international.n-va.be/files/generated/files/page-attachment/logo_nva_verandering-werkt_z_0.jpg"
+         id="image111" />
+    </g>
+    <g
+       transform="translate(196,0)"
+       id="g113">
+      <image
+         x="54.5"
+         y="353.9294117647059"
+         width="30"
+         height="30"
+         href="https://www.cdenvwevelgem.be/sites/cdvwevelgem/files/styles/colorbox_large__1200x1200/public/t_is_beslist_1080x1080_3_0.png?itok=VwiNS9Qw"
+         id="image112" />
+    </g>
+    <g
+       transform="translate(261,0)"
+       id="g114">
+      <image
+         x="54.5"
+         y="353.9294117647059"
+         width="30"
+         height="30"
+         href="https://assets.nationbuilder.com/openvld/pages/68/attachments/original/1698034850/logonieuw-light-logo.png?1698034850"
+         id="image113" />
+    </g>
+    <g
+       transform="translate(326,0)"
+       id="g115">
+      <image
+         x="54.5"
+         y="353.9294117647059"
+         width="30"
+         height="30"
+         href="https://www.pvdashop.be/cdn/shop/files/PVDA-logo-LARGE-rgb-1_300x300.png?v=1638700063"
+         id="image114" />
+    </g>
+    <g
+       transform="translate(521,0)"
+       id="g116">
+      <image
+         x="54.5"
+         y="353.9294117647059"
+         width="30"
+         height="30"
+         href="https://blanco2024.be/wp-content/uploads/2023/04/logo-blanco-11-04-2023.png"
+         id="image115" />
+    </g>
+  </g>
+  <g
+     aria-label="text"
+     transform="translate(24.5,-7.5)"
+     id="g127">
+    <g
+       stroke="white"
+       stroke-width="3"
+       stroke-linejoin="round"
+       paint-order="stroke"
+       text-anchor="center"
+       font-family="Tiempos Text"
+       transform="translate(1,0)"
+       id="g118">
+      <text
+         y="0.32em"
+         transform="translate(46,20)"
+         font-size="14"
+         fill="#000000"
+         id="text117">36.7 %</text>
+    </g>
+    <g
+       stroke="white"
+       stroke-width="3"
+       stroke-linejoin="round"
+       paint-order="stroke"
+       text-anchor="center"
+       font-family="Tiempos Text"
+       transform="translate(66,0)"
+       id="g119">
+      <text
+         y="0.32em"
+         transform="translate(46,236.078431372549)"
+         font-size="14"
+         fill="#000000"
+         id="text118">15.8 %</text>
+    </g>
+    <g
+       stroke="white"
+       stroke-width="3"
+       stroke-linejoin="round"
+       paint-order="stroke"
+       text-anchor="center"
+       font-family="Tiempos Text"
+       transform="translate(131,0)"
+       id="g120">
+      <text
+         y="0.32em"
+         transform="translate(46,243.5294117647059)"
+         font-size="14"
+         fill="#000000"
+         id="text119">15.1 %</text>
+    </g>
+    <g
+       stroke="white"
+       stroke-width="3"
+       stroke-linejoin="round"
+       paint-order="stroke"
+       text-anchor="center"
+       font-family="Tiempos Text"
+       transform="translate(196,0)"
+       id="g121">
+      <text
+         y="0.32em"
+         transform="translate(46,250.98039215686276)"
+         font-size="14"
+         fill="#000000"
+         id="text120">14.4 %</text>
+    </g>
+    <g
+       stroke="white"
+       stroke-width="3"
+       stroke-linejoin="round"
+       paint-order="stroke"
+       text-anchor="center"
+       font-family="Tiempos Text"
+       transform="translate(261,0)"
+       id="g122">
+      <text
+         y="0.32em"
+         transform="translate(46,325.4901960784314)"
+         font-size="14"
+         fill="#000000"
+         id="text121">7.2 %</text>
+    </g>
+    <g
+       stroke="white"
+       stroke-width="3"
+       stroke-linejoin="round"
+       paint-order="stroke"
+       text-anchor="center"
+       font-family="Tiempos Text"
+       transform="translate(326,0)"
+       id="g123">
+      <text
+         y="0.32em"
+         transform="translate(46,340.3921568627451)"
+         font-size="14"
+         fill="#000000"
+         id="text122">5.8 %</text>
+    </g>
+    <g
+       stroke="white"
+       stroke-width="3"
+       stroke-linejoin="round"
+       paint-order="stroke"
+       text-anchor="center"
+       font-family="Tiempos Text"
+       transform="translate(391,0)"
+       id="g124">
+      <text
+         y="0.32em"
+         transform="translate(46,377.6470588235294)"
+         font-size="14"
+         fill="#000000"
+         id="text123">2.2 %</text>
+    </g>
+    <g
+       stroke="white"
+       stroke-width="3"
+       stroke-linejoin="round"
+       paint-order="stroke"
+       text-anchor="center"
+       font-family="Tiempos Text"
+       transform="translate(456,0)"
+       id="g125">
+      <text
+         y="0.32em"
+         transform="translate(46,385.0980392156863)"
+         font-size="14"
+         fill="#000000"
+         id="text124">1.4 %</text>
+    </g>
+    <g
+       stroke="white"
+       stroke-width="3"
+       stroke-linejoin="round"
+       paint-order="stroke"
+       text-anchor="center"
+       font-family="Tiempos Text"
+       transform="translate(521,0)"
+       id="g126">
+      <text
+         y="0.32em"
+         transform="translate(46,385.0980392156863)"
+         font-size="14"
+         fill="#000000"
+         id="text125">1.4 %</text>
+    </g>
+  </g>
+</svg>
