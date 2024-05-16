@@ -111,7 +111,7 @@
                 "PVDA": 14,
                 "Ik stem blanco": 3,
                 "Niet van plan te gaan stemmen": 3,
-                "10": 1,
+                "Ik stem blanco": 1,
                 "Voor U": 3,
                 "Volt": 6,
                 "Ik weet het nog niet": 63
@@ -192,7 +192,7 @@
                 "PVDA": 7,
                 "Ik stem blanco": 1,
                 "Niet van plan te gaan stemmen": 1,
-                "10": 1,
+                "Ik stem blanco": 1,
                 "Volt": 6,
                 "Ik weet het nog niet": 14
             }
@@ -237,7 +237,7 @@
                 "PVDA": 48,
                 "Ik stem blanco": 3,
                 "Niet van plan te gaan stemmen": 2,
-                "10": 3,
+                "Ik stem blanco": 3,
                 "Partij Blanco": 3,
                 "Volt": 25,
                 "Ik weet het nog niet": 88
@@ -502,7 +502,7 @@
                 "PVDA": 13,
                 "Ik stem blanco": 1,
                 "Niet van plan te gaan stemmen": 2,
-                "10": 1,
+                "Ik stem blanco": 1,
                 "Voor U": 2,
                 "Volt": 3,
                 "Ik weet het nog niet": 26
@@ -571,48 +571,52 @@
         }
     }
 
-    function verwerk(data, parlement) {
+    function verwerk(data, parlement, metVorigePeilingen) {
         let perFaculteit = new Map();
         let perPartij = new Map();
-
 
         for (let facId in data) {
             let fac = data[facId];
             let resultatenVoorDitParlement = fac[parlement];
 
             for (let stemkeuze in resultatenVoorDitParlement) {
-                // const res = Math.round(resultatenVoorDitParlement[stemkeuze] * facWegingen.get(fac.naam));
-                const res = resultatenVoorDitParlement[stemkeuze];
-
                 if (stemkeuze == "Ik weet het nog niet") {
                     continue;
                 }
 
+                const ongewogen = resultatenVoorDitParlement[stemkeuze];
+                const gewogen = ongewogen * facWegingen.get(fac.naam);
+
                 if (perFaculteit.has(stemkeuze)) {
-                    perFaculteit.set(stemkeuze, perFaculteit.get(stemkeuze) + res)
+                    perFaculteit.set(stemkeuze, perFaculteit.get(stemkeuze) + gewogen)
                 } else {
-                    perFaculteit.set(stemkeuze, res)
+                    perFaculteit.set(stemkeuze, gewogen)
                 }
 
                 if (perPartij.has(stemkeuze)) {
-                    perPartij.get(stemkeuze).set(fac.naam, res)
+                    perPartij.get(stemkeuze).set(fac.naam, gewogen)
                 } else {
-                    perPartij.set(stemkeuze, new Map([[fac.naam, res]]))
+                    perPartij.set(stemkeuze, new Map([[fac.naam, gewogen]]))
                 }
             }
         }
-
-        let respons = [...perFaculteit.values()].reduce((p, c) => p + c);
+        
+        let respons = 0
+        perPartij.forEach((res, partij) => {
+            respons += Math.round([...res.values()].reduce((c, p) => c + p))
+        })
 
         return {
             respons: respons,
             totaal: Array.from([...perFaculteit.entries()].flatMap(el => {
-                if (vroegereResultaten(el[0]) != undefined) {
+                let vroegere = vroegereResultaten(parlement, el[0]);
+
+                if (vroegere != undefined && metVorigePeilingen) {
                     return [
                         {
                             "partij": el[0],
-                            "procentTekst": `${Math.round(vroegereResultaten(el[0]) * 1000) / 10} %`,
-                            "rel": vroegereResultaten(el[0]),
+                            "procentTekst": `${Math.round(vroegere * 1000) / 10} %`,
+                            "rel": vroegere,
                             "totaal": el[1],
                             "verdelingPerFac": perPartij.get(el[0]),
                             "tijdsframe": "vroeger",
@@ -687,17 +691,47 @@
         }
     }
 
-    function vroegereResultaten(naam) {
-        switch (naam) {
-            case "CD&V": return 0.118;
-            case "Groen": return 0.302;
-            case "PVDA": return 0.023;
-            case "Open VLD": return 0.208;
-            case "N-VA": return 0.191;
-            case "Vlaams Belang": return 0.06;
-            case "Vooruit": return 0.044;
-            case "Ik stem blanco": return 0.031;
-            default: return undefined;
+    function vroegereResultaten(parlement, naam) {
+        if (parlement == "vlaams") {
+            switch (naam) {
+                case "CD&V": return 0.137;
+                case "Groen": return 0.295;
+                case "PVDA": return 0.034;
+                case "Open VLD": return 0.158;
+                case "N-VA": return 0.238;
+                case "Vlaams Belang": return 0.059;
+                case "Vooruit": return 0.052;
+                case "Ik stem blanco": return 0.019;
+                default: return undefined;
+            }
+        }
+
+        if (parlement == "federaal") {
+            switch (naam) {
+                case "CD&V": return 0.14;
+                case "Groen": return 0.286;
+                case "PVDA": return 0.032;
+                case "Open VLD": return 0.190;
+                case "N-VA": return 0.223;
+                case "Vlaams Belang": return 0.064;
+                case "Vooruit": return 0.038;
+                case "Ik stem blanco": return 0.015;
+                default: return undefined;
+            }
+        }
+
+        if (parlement == "europees") {
+            switch (naam) {
+                case "CD&V": return 0.118;
+                case "Groen": return 0.302;
+                case "PVDA": return 0.023;
+                case "Open VLD": return 0.208;
+                case "N-VA": return 0.191;
+                case "Vlaams Belang": return 0.06;
+                case "Vooruit": return 0.044;
+                case "Ik stem blanco": return 0.031;
+                default: return undefined;
+            }
         }
     }
 
@@ -726,8 +760,8 @@
         ["Faculteit Letteren", 0.3],
         ["Faculteit Psychologische en Pedagogische Wetenschappen", 2.12],
         ["Faculteit Wetenschappen", 0.38],
-        ["Faculteit Bio-ingenieurswetenschappen", 0.73],
-        ["Faculteit Ingenieurswetenschappen", 1.89],
+        ["Faculteit Bio-ingenieurswetenschappen", 1.89],
+        ["Faculteit Ingenieurswetenschappen", 0.73],
         ["Faculteit Industriële Ingenieurswetenschappen", 5.42],
         ["Faculteit Architectuur", 6.81],
         ["Faculteit Geneeskunde", 2.75],
@@ -822,9 +856,12 @@
     }
 
     document.getElementById("faculteitSelect").addEventListener("change", hertekenPerFac);
+    // document.getElementById("toon-vorige-peilingen").addEventListener("change", hertekenStudentenPlots)
+    document.getElementById("toon").addEventListener("click", () => { hertekenStudentenPlots(true) })
+    document.getElementById("verberg").addEventListener("click", () => { hertekenStudentenPlots(false) })
 
-    function renderStudentenPlot(parlement) {
-        const data = verwerk(studentenData, parlement);
+    function renderStudentenPlot(parlement, metVorigePeilingen) {
+        const data = verwerk(studentenData, parlement, metVorigePeilingen);
 
         const plot = Plot.plot({
             title: `Stemgedrag studenten - ${parlement.charAt(0).toUpperCase() + parlement.slice(1)} parlement`,
@@ -832,9 +869,7 @@
             marginBottom: 100,
             x: { axis: null },
             fx: { axis: "bottom", tickRotate: -30, label: "Stemkeuze" },
-            y: { grid: true, label: "Procent", percent: true },
-            
-
+            y: { grid: true, label: null, percent: true },
 
             style: {
                 "min-width": "100%"
@@ -859,7 +894,7 @@
                     y: (d) => 0.03,
                     filter: (d) => isPartij(d.partij),
                     src: (d) => partijLogos(d.partij),
-                    opacity: 0.5,
+                    opacity: metVorigePeilingen ? 0.75 : 1,
                     width: 30,
                 }),
                 Plot.text(data.totaal, {
@@ -869,9 +904,10 @@
                     text: "procentTekst",
                     lineWidth: 30,
                     textAnchor: "center",
+                    stroke: "white",
                     dy: -8,
                     fill: (obj) => obj.tijdsframe == "vroeger" ? "#808080" : "#000000",
-                    fontSize: (obj) => obj.tijdsframe == "vroeger" ? 12 : 18,
+                    fontSize: (obj) => obj.tijdsframe == "vroeger" ? 11 : 14,
                 }),
                 Plot.tip(data.totaal, Plot.pointerX({
                     x: "tijdsframe",
@@ -882,23 +918,31 @@
                     title: (d) =>
                         d.tijdsframe == "nu" ?
                             d.partij +
-                            `\nTotaal: ${d.totaal}\n\n` +
+                            `\nTotaal: ${Math.round(d.totaal)}\n\n` +
                             [...d.verdelingPerFac.entries()]
                                 .toSorted((a, b) => b[1] - a[1])
-                                .map((curr) => `${facAfkortingen.get(curr[0])}: ${curr[1]} (${(curr[1] / d.totaal * 100).toFixed(1)}%)`)
+                                .map((curr) => `${facAfkortingen.get(curr[0])}: ${Math.round(curr[1])} (${(curr[1] / d.totaal * 100).toFixed(1)}%)`)
                                 .join("\n")
                             : d.partij + `\nVetopeiling 2019: ${d.procentTekst}`
                 }))
             ]
         });
         const div = document.querySelector(`#studenten-${parlement}`);
+        div.innerHTML = "";
         div.append(plot);
     }
 
-    renderStudentenPlot("vlaams");
-    renderStudentenPlot("federaal");
-    renderStudentenPlot("europees");
+    function hertekenStudentenPlots(metVorigePeilingen) {
+        renderStudentenPlot("vlaams", metVorigePeilingen);
+        renderStudentenPlot("federaal", metVorigePeilingen);
+        renderStudentenPlot("europees", metVorigePeilingen);
+    }
+
+    hertekenStudentenPlots(true)
 </script>
+
+<button id="toon">Toon vorige Vetopeiling</button>
+<button id="verberg">Verberg vorige Vetopeiling</button>
 
 <div id="studenten-vlaams" style="min-width: 100%;"></div>
 <div id="studenten-federaal" style="min-width: 100%;"></div>
