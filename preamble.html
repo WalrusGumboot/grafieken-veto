@@ -902,11 +902,15 @@
             ]
         });
         const div = document.querySelector("#faculteit-vlaams");
-        div.innerHTML = "";
-        div.append(facPlot);
 
-        const content = document.querySelector("#faculteit-content");
-        content.innerHTML = facContent.get(document.getElementById("faculteitSelect").value);
+        if (div !== null) {
+            div.innerHTML = "";
+            div.append(facPlot);
+            
+            const content = document.querySelector("#faculteit-content");
+            content.innerHTML = facContent.get(document.getElementById("faculteitSelect").value);
+        }
+
     }
 
     document.getElementById("faculteitSelect").addEventListener("change", () => { hertekenPerFac(false) });
@@ -983,8 +987,11 @@
             ]
         });
         const div = document.querySelector(`#studenten-${parlement}`);
-        div.innerHTML = "";
-        div.append(plot);
+
+        if (div !== null) {
+            div.innerHTML = "";
+            div.append(plot);
+        }
     }
 
     function hertekenStudentenPlots(metVorigePeilingen) {
@@ -1045,8 +1052,11 @@
             ]
         });
         const div = document.querySelector(`#proffen-${parlement}`);
-        div.innerHTML = "";
-        div.append(proffenPlot);
+
+        if (div !== null) {
+            div.innerHTML = "";
+            div.append(proffenPlot);
+        }
     }
 
     tekenProffenPlot("vlaams");
