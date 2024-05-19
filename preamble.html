@@ -613,6 +613,51 @@
         }
     }
 
+    const personeelData = {
+        "personeel": {
+            "naam": "Personeel",
+            "vlaams": {
+                "N-VA": 49,
+                "Vlaams Belang": 13,
+                "Open VLD": 24,
+                "CD&V": 49,
+                "Vooruit": 72,
+                "Groen": 163,
+                "PVDA": 32,
+                "Blanco": 2,
+                "Niet van plan te gaan stemmen": 7,
+                "Partij Blanco": 7,
+                "Voor U": 2
+            },
+            "federaal": {
+                "N-VA": 51,
+                "Vlaams Belang": 7,
+                "Open VLD": 30,
+                "CD&V": 43,
+                "Vooruit": 79,
+                "Groen": 159,
+                "PVDA": 31,
+                "Blanco": 3,
+                "Niet van plan te gaan stemmen": 6,
+                "Partij Blanco": 7,
+                "L'Unie": 2
+            },
+            "europees": {
+                "N-VA": 41,
+                "Vlaams Belang": 6,
+                "Open VLD": 28,
+                "CD&V": 40,
+                "Vooruit": 60,
+                "Groen": 190,
+                "PVDA": 22,
+                "Blanco": 6,
+                "Niet van plan te gaan stemmen": 5,
+                "Partij Blanco": 3,
+                "Volt": 24
+            }
+        }
+    }
+
     function verwerk(data, parlement, metVorigePeilingen, faculteit, weeg) {
         let perFaculteit = new Map();
         let perPartij = new Map();
@@ -906,7 +951,7 @@
         if (div !== null) {
             div.innerHTML = "";
             div.append(facPlot);
-            
+
             const content = document.querySelector("#faculteit-content");
             content.innerHTML = facContent.get(document.getElementById("faculteitSelect").value);
         }
@@ -1004,7 +1049,7 @@
         let data = verwerk(proffenData, parlement, false, "proffen", false)
 
         const proffenPlot = Plot.plot({
-            title: `Stemgedrag professoren en ZAP - ${parlement.charAt(0).toUpperCase() + parlement.slice(1)} parlement`,
+            title: `Stemgedrag ZAP - ${parlement.charAt(0).toUpperCase() + parlement.slice(1)} parlement`,
             subtitle: `responsgraad n = ${data.respons}\n${data.respons < 30 ? "(NB: de respons voor deze faculteit ligt erg laag. Neem de resultaten dus met een korrel zout.)" : ""}`,
             marginBottom: 100,
             x: { axis: null },
@@ -1059,12 +1104,113 @@
         }
     }
 
+    function tekenPersoneelPlot(parlement) {
+        let data = verwerk(personeelData, parlement, false, "personeel", false)
+
+        const personeelPlot = Plot.plot({
+            title: `Stemgedrag personeel - ${parlement.charAt(0).toUpperCase() + parlement.slice(1)} parlement`,
+            subtitle: `responsgraad n = ${data.respons}\n${data.respons < 30 ? "(NB: de respons voor deze faculteit ligt erg laag. Neem de resultaten dus met een korrel zout.)" : ""}`,
+            marginBottom: 100,
+            x: { axis: null },
+            fx: { axis: "bottom", tickRotate: -30, label: "Stemkeuze" },
+            y: { grid: true, label: null, percent: true },
+
+            style: {
+                "min-width": "100%"
+            },
+            marks: [
+                Plot.barY(data.totaal, {
+
+                    channels: {
+                        tijdsframeVolgorde: "tijdsframeVolgorde"
+                    },
+
+                    x: "tijdsframe",
+                    y: "rel",
+                    fx: "partij",
+                    sort: { x: "tijdsframeVolgorde", fx: "-y", reduce: (group) => group[group.length - 1] },
+
+                    // fill: (obj) => (obj.tijdsframe == "nu" ? partijKleuren(obj.partij) : verlicht(partijKleuren(obj.partij))),
+                    fill: (obj) => { if (obj.tijdsframe == "vroeger") { return lichtePartijKleuren(obj.partij) } return partijKleuren(obj.partij) }
+                }),
+                Plot.image(data.totaal, {
+                    fx: "partij",
+                    y: (d) => 0.03,
+                    filter: (d) => isPartij(d.partij),
+                    src: (d) => partijLogos(d.partij),
+                    width: 30,
+                }),
+                Plot.text(data.totaal, {
+                    fontFamily: "Tiempos Text",
+                    x: "tijdsframe",
+                    y: "rel",
+                    fx: "partij",
+                    text: "procentTekst",
+                    lineWidth: 30,
+                    textAnchor: "center",
+                    stroke: "white",
+                    dy: -8,
+                    fill: (obj) => obj.tijdsframe == "vroeger" ? "#808080" : "#000000",
+                    fontSize: (obj) => obj.tijdsframe == "vroeger" ? 11 : 14,
+                })
+            ]
+        });
+        const div = document.querySelector(`#personeel-${parlement}`);
+
+        if (div !== null) {
+            div.innerHTML = "";
+            div.append(personeelPlot);
+        }
+    }
+
     tekenProffenPlot("vlaams");
     tekenProffenPlot("federaal");
     tekenProffenPlot("europees");
+
+    tekenPersoneelPlot("vlaams");
+    tekenPersoneelPlot("federaal");
+    tekenPersoneelPlot("europees");
 
     hertekenStudentenPlots(true)
 </script>
 
 <button id="toon">Toon vorige Vetopeiling</button>
 <button id="verberg">Verberg vorige Vetopeiling</button>
+
+<div id="studenten-vlaams" style="min-width: 100%;"></div>
+<div id="studenten-federaal" style="min-width: 100%;"></div>
+<div id="studenten-europees" style="min-width: 100%;"></div>
+
+<div id="proffen-vlaams" style="min-width: 100%;"></div>
+<div id="proffen-federaal" style="min-width: 100%;"></div>
+<div id="proffen-europees" style="min-width: 100%;"></div>
+
+<div id="personeel-vlaams" style="min-width: 100%;"></div>
+<div id="personeel-federaal" style="min-width: 100%;"></div>
+<div id="personeel-europees" style="min-width: 100%;"></div>
+
+<div id="faculteitengedoe">
+    <label for="faculteitSelect">Toon de gegevens per faculteit:</label>
+    <select id="faculteitSelect">
+        <option value="theologie">Faculteit Theologie en Religiewetenschappen</option>
+        <option value="kerkelijk-recht">Bijzondere Faculteit Kerkelijk Recht</option>
+        <option value="hiw">Hoger Instituut voor Wijsbegeerte</option>
+        <option value="rechten-crimin">Faculteit Rechtsgeleerdheid en Criminologische Wetenschappen</option>
+        <option value="econ">Faculteit Economie en Bedrijfswetenschappen</option>
+        <option value="soc">Faculteit Sociale Wetenschappen</option>
+        <option value="letteren">Faculteit Letteren</option>
+        <option value="ppw">Faculteit Psychologische en Pedagogische Wetenschappen</option>
+        <option value="wet">Faculteit Wetenschappen</option>
+        <option value="ing">Faculteit Ingenieurswetenschappen</option>
+        <option value="bio">Faculteit Bio-ingenieurswetenschappen</option>
+        <option value="iiw">Faculteit Industriële Ingenieurswetenschappen</option>
+        <option value="arch">Faculteit Architectuur</option>
+        <option value="geneesk">Faculteit Geneeskunde</option>
+        <option value="farma">Faculteit Farmaceutische Wetenschappen</option>
+        <option value="brw">Faculteit Bewegings- en Revalidatiewetenschappen</option>
+    </select>
+
+    <div id="faculteit-vlaams" style="min-width: 100%;"></div>
+
+    <div id="faculteit-content"></div>
+</div>
